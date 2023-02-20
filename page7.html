@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Frank The Fish</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <style>
+    body {
+  margin: 0;
+}
+
+#canvas {
+  width: 300px;
+  height: 400px;
+  margin: 0px auto;
+}
+
+#tophair {
+  width: 300px;
+  height: 100px;
+  background: black;
+  border-radius: 50% 50% 0% 0%;
+}
+
+#skin {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  top: 100px;
+  right: 100px;
+  background: blue ;
+  border-radius: 0% 0% 50% 50%;
+  box-shadow: inset 0 0 50px black;
+  transform: rotate(-90deg);
+}
+
+#curlyhair1 {
+  z-index: 1;
+  position: absolute;
+  width: 35px;
+  height: 100px;
+  top: -15px;
+  left: -8px;
+  background: black;
+  border-radius: 0% 0% 50% 0%;
+  transform: rotate(15deg);
+}
+
+#curlyhair2 {
+  z-index: 1;
+  position: absolute;
+  width: 35px;
+  height: 100px;
+  top: -15px;
+  right: -8px;
+  background: black;
+  border-radius: 0% 0% 0% 50%;
+  transform: rotate(-15deg);
+}
+
+#curlyhair3 {
+  z-index: 1;
+  position: absolute;
+  width: 35px;
+  height: 100px;
+  top: -5px;
+  left: 5px;
+  background: black;
+  border-radius: 0% 0% 50% 0%;
+  transform: rotate(1deg);
+}
+
+#curlyhair4 {
+  z-index: 1;
+  position: absolute;
+  width: 35px;
+  height: 100px;
+  top: -5px;
+  right: 5px;
+  background: black;
+  border-radius: 0% 0% 0% 50%;
+  transform: rotate(-1deg);
+}
+
+#curlyhair5 {
+  z-index: 1;
+  position: absolute;
+  width: 15px;
+  height: 100px;
+  top: -25px;
+  left: -8px;
+  background: black;
+  border-radius: 0% 0% 50% 0%;
+  transform: rotate(25deg);
+}
+
+#curlyhair6 {
+  z-index: 1;
+  position: absolute;
+  width: 15px;
+  height: 100px;
+  top: -25px;
+  right: -8px;
+  background: black;
+  border-radius: 0% 0% 0% 50%;
+  transform: rotate(-25deg);
+}
+
+#eyebrow1 {
+  position: absolute;
+  width: 70px;
+  height: 10px;
+  background: black;
+  top: 60px;
+  left: 50px;
+  transform: rotate(-15deg);
+}
+
+#eyebrow2 {
+  position: absolute;
+  width: 70px;
+  height: 10px;
+  background: black;
+  top: 100px;
+  right: 100px;
+  transform: rotate(15deg);
+}
+
+#eye1 {
+  position: absolute;
+  width: 120px;
+  height: 100px;
+  background: white;
+  top: 375px;
+  left: 350px;
+  border-radius: 30% 30% 50% 50%;
+  box-shadow: inset 0 0 20px black;
+  transform: rotate(90deg);
+}
+
+#eye2 {
+  position: absolute;
+  width: 70px;
+  height: 50px;
+  background: white;
+  top: 80px;
+  right: 50px;
+  border-radius: 30% 30% 50% 50%;
+  box-shadow: inset 0 0 20px black;
+}
+
+#iris2 {
+  z-index: 1;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: black;
+  top: 425px;
+  right: 150px;
+  border-radius: 50%;
+}
+
+#nose {
+  position: absolute;
+  border-bottom: 50px solid blue;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  height: 40px;
+  width: 100px;
+  top: -225px;
+  left: 250px;
+  transform: rotate(-180deg);
+}
+
+#nose2 {
+  position: absolute;
+  border-bottom: 50px solid blue;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  height: 40px;
+  width: 150px;
+  top: -274px;
+  left: 225px;
+  transform: rotate(-180deg);
+}
+
+#nose3 {
+  position: absolute;
+  border-bottom: 50px solid blue;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  height: 40px;
+  width: 200px;
+  top: -320px;
+  left: 200px;
+  transform: rotate(-180deg);
+}
+
+#nose4 {
+  position: absolute;
+  border-bottom: 50px solid blue;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  height: 40px;
+  width: 250px;
+  top: -365px;
+  left: 175px;
+  transform: rotate(-180deg);
+}
+
+#nose5 {
+  position: absolute;
+  border-bottom: 50px solid blue;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  height: 40px;
+  width: 300px;
+  top: -410px;
+  left: 150px;
+  transform: rotate(-180deg);
+}
+
+
+#ear1 {
+  position: absolute;
+  width: 400px;
+  height: 600px;
+  background: blue;
+  box-shadow: inset 0 0 20px black;
+  left: 100px;
+  top: -290px;
+  border-radius: 50% 50% 50% 50%;
+  transform: rotate(-90deg);
+}
+
+#ear2 {
+  position: absolute;
+  width: 250px;
+  height: 500px;
+  background: purple;
+  box-shadow: inset 0 0 20px black;
+  right: 150px;
+  top: -150px;
+  border-radius: 50% 50% 50% 50%;
+  transform: rotate(20deg);
+}
+
+  </style>
+</head>
+
+<body>
+
+  <div id="canvas">
+      <div id="skin">
+        <div id="eye1"></div>
+        <div id="eye2"></div>
+        <div id="iris1"></div>
+        <div id="iris2"></div>
+        <div id="nose"></div>
+        <div id="nose2"></div>
+        <div id="nose3"></div>
+        <div id="nose4"></div>
+        <div id="nose5"></div>
+        <div id="lips"></div>
+        <div id="ear1"></div>
+        <div id="ear2"></div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
